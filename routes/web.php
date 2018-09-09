@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('admin/dashboard', ['as' => 'admin.dashboard', 'uses' => 'Admin\DashboardController@index']);
+
