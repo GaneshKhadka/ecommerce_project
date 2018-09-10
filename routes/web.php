@@ -15,6 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('admin/dashboard', ['as' => 'admin.dashboard', 'uses' => 'Admin\DashboardController@index']);
-Route::get('admin/test', ['as' => 'admin.test', 'uses' => 'Admin\DashboardController@test']);
+Route::group(['middleware' => 'auth'], function () {
 
+	Route::get('admin/dashboard', ['as' => 'admin.dashboard', 'uses' => 'Admin\DashboardController@index']);
+    Route::get('admin/test', ['as' => 'admin.test', 'uses' => 'Admin\DashboardController@test']);
+
+
+});
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

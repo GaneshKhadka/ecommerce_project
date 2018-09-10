@@ -2,5 +2,5 @@
 
 @section('content')
 
-   <p>Hello</p>
+   <p>Hello</p> 
 @endsection
