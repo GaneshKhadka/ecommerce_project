@@ -1,3 +1,3 @@
 <div class="row-fluid">
-  <div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>
+  <div id="footer" class="span12"> 2018 &copy; Eagle-i. Brought to you by <a href="http://eagle-i-tech.com/">Eagle-i-technology</a> </div>
 </div>
