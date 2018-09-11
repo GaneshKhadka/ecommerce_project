@@ -7,7 +7,7 @@
 
 <!--Header-part-->
 <div id="header">
-  <h1><a href="dashboard.html">Matrix Admin</a></h1>
+  <h1><a href="{{ url('admin/dashboard')}}">Matrix Admin</a></h1>
 </div>
 <!--close-Header-part--> 
 
@@ -50,7 +50,7 @@
         <li><a class="sTrash" title="" href="#"><i class="icon-trash"></i> trash</a></li>
       </ul>
     </li>
-    <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
+    <li class=""><a title="" href="{{ url('admin/settings')}}"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
 
     <li class="">
       <a href="#" onclick="event.preventDefault();
@@ -91,31 +91,18 @@
 
 <!--end-Footer-part-->
 
-@yield('js')
 
-<script type="text/javascript">
-  // This function is called from the pop-up menus to transfer to
-  // a different page. Ignore if the value returned is a null string:
-  function goPage (newURL) {
-
-      // if url is empty, skip the menu dividers and reset the menu selection to default
-      if (newURL != "") {
-      
-          // if url is "-", it is this page -- reset the menu:
-          if (newURL == "-" ) {
-              resetMenu();            
-          } 
-          // else, send page to designated URL            
-          else {  
-            document.location.href = newURL;
-          }
-      }
-  }
-
-// resets the menu selection upon entry to this page:
-function resetMenu() {
-   document.gomenu.selector.selectedIndex = 2;
-}
 </script>
+
+<script src="{{ asset('admin_panel/assets/js/jquery.min.js') }}"></script> 
+<script src="{{ asset('admin_panel/assets/js/jquery.ui.custom.js') }}"></script> 
+<script src="{{ asset('admin_panel/assets/js/bootstrap.min.js') }}"></script> 
+<script src="{{ asset('admin_panel/assets/js/jquery.uniform.js') }}"></script> 
+<script src="{{ asset('admin_panel/assets/js/select2.min.js') }}"></script> 
+<script src="{{ asset('admin_panel/assets/js/jquery.validate.js') }}"></script> 
+<script src="{{ asset('admin_panel/assets/js/matrix.js') }}"></script> 
+<script src="{{ asset('admin_panel/assets/js/matrix.form_validation.js') }}"></script>
+
+
 </body>
 </html>
